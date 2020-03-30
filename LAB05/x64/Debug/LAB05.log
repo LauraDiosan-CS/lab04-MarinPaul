@@ -1,0 +1,5 @@
+﻿  LAB05.cpp
+  userinterface.cpp
+  Generating Code...
+C:\Users\mipau\Desktop\Git\lab04-MarinPaul\LAB05\userinterface.cpp(161): warning C4715: 'UserInterface::functie': not all control paths return a value
+  LAB05.vcxproj -> C:\Users\mipau\Desktop\Git\lab04-MarinPaul\x64\Debug\LAB05.exe

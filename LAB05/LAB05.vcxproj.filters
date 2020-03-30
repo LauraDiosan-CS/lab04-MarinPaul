@@ -18,24 +18,24 @@
     <ClCompile Include="LAB05.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="in_out.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
     <ClCompile Include="movie.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="repo.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="tests.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="repo.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
     <ClCompile Include="service.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="userinterface.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="in_out.h">
+    <ClInclude Include="date.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="movie.h">
@@ -44,13 +44,13 @@
     <ClInclude Include="repo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tests.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="service.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="date.h">
+    <ClInclude Include="tests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="userinterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

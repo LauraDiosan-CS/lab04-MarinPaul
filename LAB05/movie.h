@@ -1,9 +1,6 @@
 #pragma once
-#include <iostream>
 #include "date.h"
 #include <string.h>
-
-using namespace std;
 
 class Movie
 {
@@ -13,16 +10,17 @@ private:
 	char* genre;
 public:
 	Movie();
-	Movie(char*, const Date&, char*);
-	Movie(const Movie&);
+	Movie(char*, Date&, char*);
+	Movie(Movie&);
 	~Movie();
 	char* getTitle();
-	char* getGenre();
 	Date& getDate();
+	char* getGenre();
 	void setTitle(char*);
+	void setDate(Date&);
 	void setGenre(char*);
-	void setDate(const Date&);
-	Movie& operator=(const Movie&);
-	bool operator==(const Movie&);
-	friend ostream& operator<<(ostream& os, const Movie&);
+	Movie& operator=(Movie&);
+	bool operator==(Movie&);
+	bool operator!=(Movie&);
+	friend ostream& operator<<(ostream&, Movie&);
 };

@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{4407307E-4EC4-4822-9D3B-FBC0ECF9EB7F}</ProjectGuid>
+    <ProjectGuid>{0F2F84B3-115F-41BE-AEA9-FE18C901F3CD}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>LAB05</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
@@ -148,19 +148,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="LAB05.cpp" />
-    <ClCompile Include="in_out.cpp" />
     <ClCompile Include="movie.cpp" />
     <ClCompile Include="repo.cpp" />
     <ClCompile Include="service.cpp" />
     <ClCompile Include="tests.cpp" />
+    <ClCompile Include="userinterface.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="date.h" />
-    <ClInclude Include="in_out.h" />
     <ClInclude Include="movie.h" />
     <ClInclude Include="repo.h" />
     <ClInclude Include="service.h" />
     <ClInclude Include="tests.h" />
+    <ClInclude Include="userinterface.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

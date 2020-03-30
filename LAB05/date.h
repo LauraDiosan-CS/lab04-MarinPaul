@@ -1,57 +1,65 @@
 #pragma once
+#include <iostream>
+
+using namespace std;
 
 struct Date
 {
-	int day;
-	int month;
-	int year;
+	int d;
+	int m;
+	int y;
 	Date()
 	{
-		this->day = 0;
-		this->month = 0;
-		this->year = 0;
+		this->d = 0;
+		this->m = 0;
+		this->y = 0;
 	}
-	Date(int newDay, int newMonth, int newYear)
+	Date(int newD, int newM, int newY)
 	{
-		this->day = newDay;
-		this->month = newMonth;
-		this->year = newYear;
+		this->d = newD;
+		this->m = newM;
+		this->y = newY;
 	}
-	Date(const Date& d)
+	Date(Date& date)
 	{
-		*this = d;
+		*this = date;
 	}
 	~Date()
 	{
-		this->day = 0;
-		this->month = 0;
-		this->year = 0;
+		this->d = 0;
+		this->m = 0;
+		this->y = 0;
 	}
-	bool operator<(const Date& d)
+	bool operator<(Date& date)
 	{
-		return (365 * this->year + 30 * this->month + this->day < 365 * d.year + 30 * d.month + d.day);
+		return (365 * this->y + 30 * this->m + this->d < 365 * date.y + 30 * date.m + date.d);
 	}
-	bool operator>=(const Date& d)
+	bool operator>=(Date& date)
 	{
-		return !this->operator<(d);
+		return !this->operator<(date);
 	}
-	bool operator>(const Date& d)
+	bool operator>(Date& date)
 	{
-		return (365 * this->year + 30 * this->month + this->day > 365 * d.year + 30 * d.month + d.day);
+		return (365 * this->y + 30 * this->m + this->d > 365 * date.y + 30 * date.m + date.d);
 	}
-	bool operator<=(const Date& d)
+	bool operator<=(Date& d)
 	{
 		return !this->operator>(d);
 	}
-	bool operator==(const Date& d)
+	bool operator==(Date& date)
 	{
-		return (this->operator<=(d) && this->operator>=(d));
+		return (this->operator<=(date) && this->operator>=(date));
 	}
-	Date& operator=(const Date& d)
+	Date& operator=(Date& date)
 	{
-		this->day = d.day;
-		this->month = d.month;
-		this->year = d.year;
+		this->d = date.d;
+		this->m = date.m;
+		this->y = date.y;
 		return *this;
+	}
+	friend ostream& operator<<(ostream& os, Date& date)
+	{
+		os << date.d << '/' << date.m << '/' << date.y;
+		return os;
 	}
 };

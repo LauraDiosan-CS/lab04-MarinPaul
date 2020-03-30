@@ -1,22 +1,23 @@
 #pragma once
 #include "movie.h"
 
-const int MAX_MOVIES = 1;
-
 class Repo
 {
 private:
-	Movie* movies;
+	Movie movies[30];
 	int noMovies;
 public:
 	Repo();
+	Repo(Repo&);
 	~Repo();
-	void add(const Movie&);
-	void del(const Movie&);
+	Repo& operator=(Repo&);
+	bool operator==(Repo&);
+	bool operator!=(Repo&);
+	void add(Movie&);
+	void del(Movie&);
 	void mod(Movie&, Movie&);
-	int find_by_title(char*);
-	int find(const Movie&);
 	Movie* getAll();
 	int getNo();
-	Movie& getMovie(int);
+	int find_by_title(char*);
+	int find(Movie&);
 };
